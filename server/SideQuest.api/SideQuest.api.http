@@ -1,0 +1,6 @@
+@SideQuest.api_HostAddress = http://localhost:5185
+
+GET {{SideQuest.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
