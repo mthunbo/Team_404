@@ -3,6 +3,7 @@
     "name": "SideQuest",
     "slug": "SideQuest",
     "version": "1.0.0",
+    "scheme": "sidequest",
 
     "web": {
       "favicon": "./assets/favicon.png"
