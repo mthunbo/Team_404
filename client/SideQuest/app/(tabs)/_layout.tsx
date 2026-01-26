@@ -25,7 +25,7 @@ export default function TabsLayout() {
                     headerShown: false,
                     tabBarLabel: () => null,
                     tabBarIcon: ({ focused }) => (
-                        <View className={"w-20 h-20 rounded-full items-center justify-center -mt-8 border-4 border-[#ececec] " + (focused ? 'bg-[#D9D9D9]' : 'bg-[#B3B3B3]')}>
+                        <View className={"w-20 h-20 rounded-full items-center justify-center -mt-8 border-4 border-[#797979] " + (focused ? 'bg-[#D9D9D9]' : 'bg-[#B3B3B3]')}>
                             <Entypo name='shop' color={'#fff'} size={30}/>
                         </View>
                     ),
