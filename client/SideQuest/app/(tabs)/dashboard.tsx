@@ -12,7 +12,7 @@ export default function Dashboard() {
             </View>
 
             <View className='w-[300px] h-[600px]'>
-                <ScrollView className='bg-[#D9D9D9] rounded-lg border border-[5px] border-[#A5A5A5] p-4'>
+                <ScrollView className='bg-[#D9D9D9] rounded-xl border border-[5px] border-[#A5A5A5] p-4'>
                     {/* Tasks will be loaded here */}
                 </ScrollView>
             </View>
