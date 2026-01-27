@@ -1,15 +1,19 @@
-using Services.IQuestService;
+using server.Models;
+using MongoDB.Driver;
+using Microsoft.Extensions.Options;
+using System.Globalization;
 
-public class QuestService : IQuestService 
+namespace server.Services
 {
-    private readonly List<Quest> _quests = new()
+    public class QuestService
     {
-        // new Quest { Id = 1, Title = "Clean your room", Description = "Tidy up your room", CoinReward = 10 },
-        // new Quest { Id = 2, Title = "Take out trash", Description = "Take trash to the bin", CoinReward = 5 }
-    };
 
-    public Ienumerable<Quest> GetQuests()
-    {
-        return _quests;
+        private readonly IMongoCollection<Quest> _quests;
+        {
+        }
+
+        public 
+        {
+        }
     }
 }

@@ -1,10 +1,8 @@
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-// The model of the quest assigned by a parent to a child
-public class QuestModel
+// The quest that can be assigned by a parent to a child
+public class Quest
 {
     // Unique ID identifier
     [BsonId]
@@ -15,6 +13,11 @@ public class QuestModel
     [BsonElement("assignedChildId")]
     [BsonRepresentation(BsonType.ObjectId)]
     public String AssignedChildId {get; set;} = null!;
+
+    // The FamilyId tells which group the quest belongs to
+    [BsonElement("familyId")]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public String FamilyId {get; set;} = null!;
 
     // Title of the quest
     [BsonElement("title")]
