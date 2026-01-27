@@ -28,7 +28,7 @@ namespace SideQuest.api.Repositories
         /// </summary>
         /// <param name="id">The ID of the family.</param>
         /// <returns>The family if found; otherwise null.</returns>
-        public async Task<Family> GetById(string id)
+        public async Task<Family?> GetById(string id)
         {
             return await _family.Find(g => g.FamilyId == id).FirstOrDefaultAsync();
         }
