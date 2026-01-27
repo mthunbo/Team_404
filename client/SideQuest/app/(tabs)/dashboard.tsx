@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import Tasks from '../components/tasks'
 
 export default function Dashboard() {
     return (
@@ -22,6 +23,7 @@ export default function Dashboard() {
             <View className='w-[300px] h-[600px]'>
                 <ScrollView className='bg-[#D9D9D9] rounded-xl border border-[5px] border-[#A5A5A5] p-4'>
                     {/* Tasks will be loaded here */}
+                    <Tasks/>
                 </ScrollView>
             </View>
         </View>
