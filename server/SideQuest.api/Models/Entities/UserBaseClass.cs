@@ -1,6 +1,8 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
+namespace SideQuest.api.Models.Entities;
+
 // The UserBase class of the parent and child user
 public abstract class UserBaseClass
 {

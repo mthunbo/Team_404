@@ -1,6 +1,8 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
+namespace SideQuest.api.Models;
+
 // The family is the group of the parent and child users
 public class Family
 {

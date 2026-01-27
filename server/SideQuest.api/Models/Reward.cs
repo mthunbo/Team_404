@@ -1,6 +1,8 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
+namespace SideQuest.api.Models;
+
 // The rewards a child-user can pick between
 public class Reward
 {
