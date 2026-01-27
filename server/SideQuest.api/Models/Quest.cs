@@ -1,6 +1,11 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
+<<<<<<< HEAD
+=======
+namespace SideQuest.api.Models;
+
+>>>>>>> feature/namespace
 // The quest that can be assigned by a parent to a child
 public class Quest
 {

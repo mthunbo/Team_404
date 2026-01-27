@@ -1,5 +1,11 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+<<<<<<< HEAD
+=======
+using SideQuest.api.Models.Entities;
+
+namespace SideQuest.api.Models;
+>>>>>>> feature/namespace
 
 // The child/normal user
 public class Child : UserBaseClass
