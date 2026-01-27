@@ -1,11 +1,8 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-<<<<<<< HEAD
-=======
 using SideQuest.api.Models.Entities;
 
 namespace SideQuest.api.Models;
->>>>>>> feature/namespace
 
 // The parent/admin user
 public class Parent : UserBaseClass
@@ -16,9 +13,5 @@ public class Parent : UserBaseClass
 
     // Birthdate of the parent user
     [BsonElement("birthdate")]
-<<<<<<< HEAD
-    public DateTime? Birthdate {get; set;} = null!;
-=======
     public DateTime Birthdate {get; set;}
->>>>>>> feature/namespace
 }
