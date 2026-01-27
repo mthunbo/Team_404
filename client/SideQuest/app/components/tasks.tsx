@@ -72,6 +72,12 @@ export default function Tasks() {
                                         </View> 
                                     </TouchableOpacity>
                                 )}
+
+                                {task.state === 'completed' && (
+                                    <View className='mt-4'>
+                                        <Text className='text-green-600 text-lg font-bold'>Waiting for approval</Text>
+                                    </View> 
+                                )}
                             </View>
                         )}
                     </View>
