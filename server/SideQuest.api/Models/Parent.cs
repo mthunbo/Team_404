@@ -2,7 +2,8 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using SideQuest.api.Models.Entities;
 
-namespace SideQuest.api.Models{
+namespace SideQuest.api.Models
+{
 
     // The parent/admin user
     public class Parent : UserBaseClass
