@@ -6,7 +6,8 @@ import Tasks from '../components/tasks'
 
 export default function Dashboard() {
     return (
-        <View className='flex-1 flex-col bg-[#B3B3B3] justify-center items-center gap-[35px]'>
+        <View className='flex-1 flex-col bg-[#B3B3B3] justify-center items-center gap-[20px]'>
+
 
             {/* Parrent view */}
             <View className='flex flex-row self-end mr-[20px]'>
@@ -19,6 +20,8 @@ export default function Dashboard() {
                 <Image source={require('../assets/Coin.png')} style={{ width: 30, height: 30 }} resizeMode="contain" />
             </View>
             */}
+
+                <Text className='text-orange-600 text-4xl font-bold'>Quests</Text>
 
             <View className='w-[300px] h-[600px]'>
                 <ScrollView className='bg-[#D9D9D9] rounded-xl border border-[5px] border-[#A5A5A5] p-4'>
