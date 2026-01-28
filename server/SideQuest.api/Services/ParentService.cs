@@ -1,7 +1,7 @@
 using SideQuest.api.Models;
 using SideQuest.api.Repositories;
 
-namespace ParentService
+namespace SideQuest.api.Services
 {
     public class ParentService
     {
