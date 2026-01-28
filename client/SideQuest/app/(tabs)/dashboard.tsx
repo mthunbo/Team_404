@@ -33,7 +33,7 @@ export default function Dashboard() {
 
                 <Text className='text-orange-600 text-4xl font-bold'>Quests</Text>
 
-            <View className='w-[300px] h-[600px]'>
+            <View className='w-[300px] h-[550px]'>
                 <ScrollView className='bg-[#D9D9D9] rounded-xl border border-[5px] border-[#A5A5A5] p-4'>
                     {/* Tasks will be loaded here */}
                     <Tasks/>
