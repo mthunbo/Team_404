@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using server.Services;
-using server.Models;
+using SideQuest.api.Models;
 
 namespace server.Controllers{
-    [HttpPost]
+    
     [ApiController]
     [Route("api/[controller]")]
     public class QuestController : ControllerBase 
@@ -18,7 +18,7 @@ namespace server.Controllers{
             _userService = userService;
             _questService = questService;
         }
-
+        [HttpPost]
         [Authorize(Roles = "Parent")]
         public async Task<IActionResult> CreateQuest(Quest quest)
         {
