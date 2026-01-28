@@ -40,14 +40,14 @@ export default function Tasks() {
                         <TouchableOpacity activeOpacity={0.8} onPress={() =>
                             setOpenTaskId(isOpen ? null : task.id)
                         }>
-                            <View className='flex flex-row justify-between p-4 rounded-lg' style={{backgroundColor: task.color}}>
-                                <View className='self-start'>
-                                    <Text className='text-white font-bold text-xl'>{task.title}</Text>
+                            <View className='flex flex-row justify-between items-center p-4 rounded-lg' style={{backgroundColor: task.color}}>
+                                <View>
+                                    <Text className='text-white font-bold text-md'>{task.title}</Text>
                                 </View>
 
                                 <View className='flex flex-row'>
-                                    <Text className='text-xl font-bold text-white mr-3'>{task.coins}</Text>
-                                    <Image source={require('../assets/Coin.png')} className='mt-[3px]' style={{ width: 20, height: 20 }} resizeMode="contain" />
+                                    <Text className='text-lg font-bold text-white mr-2'>{task.coins}</Text>
+                                    <Image source={require('../assets/Coin.png')} className='mt-[4px]' style={{ width: 20, height: 20 }} resizeMode="contain" />
                                 </View>
                             </View>
                         </TouchableOpacity>
