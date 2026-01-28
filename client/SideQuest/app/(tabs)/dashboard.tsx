@@ -3,7 +3,7 @@ import { Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import Tasks from '../components/tasks'
-import coinDisplay from '../components/coindisplay'
+import CoinDisplay from '../components/coindisplay'
 
 export default function Dashboard() {
     const router = useRouter();
@@ -19,14 +19,13 @@ export default function Dashboard() {
                     </TouchableOpacity>
                 </View>
 
-                {/* Parrent view */}
+                {/* Parrent view 
                 <View className='flex flex-row self-end'>
                     <TouchableOpacity onPress={() => alert('Button pressed!')}><Ionicons name='add' color={'#fff'} size={40}></Ionicons></TouchableOpacity>
                 </View>
-
-                {/*
-                    <coinDisplay />
                 */}
+
+                    <CoinDisplay />
             </View>
 
                 <Text className='text-orange-600 text-4xl font-bold'>Quests</Text>
