@@ -8,6 +8,9 @@ export default function RootLayout() {
                 name="(tabs)" 
                 options={{ headerShown: false }} // This hides the STACK's header
             />
+            <Stack.Screen 
+                name='settings'
+            />
         </Stack>
     );
 }

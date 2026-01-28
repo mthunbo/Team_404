@@ -5,13 +5,15 @@ import { useRouter } from 'expo-router';
 import Tasks from '../components/tasks'
 
 export default function Dashboard() {
+    const router = useRouter();
+
     return (
         <View className='flex-1 flex-col bg-[#B3B3B3] justify-center items-center gap-[20px]'>
 
             <View className='flex flex-row justify-between px-6 w-full'>
                 {/* Settings button */}
                 <View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => router.push('/settings')}>
                         <Ionicons name='settings-sharp' color={'#fff'} size={40} />
                     </TouchableOpacity>
                 </View>
