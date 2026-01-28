@@ -8,7 +8,7 @@ export default function Dashboard() {
     return (
         <View className='flex-1 flex-col bg-[#B3B3B3] justify-center items-center gap-[20px]'>
 
-            <View className='flex flex-row justify-between px-6'>
+            <View className='flex flex-row justify-between px-6 w-full'>
                 {/* Settings button */}
                 <View>
                     <TouchableOpacity>
@@ -17,7 +17,7 @@ export default function Dashboard() {
                 </View>
 
                 {/* Parrent view */}
-                <View className='flex flex-row self-end mr-[20px]'>
+                <View className='flex flex-row self-end'>
                     <TouchableOpacity onPress={() => alert('Button pressed!')}><Ionicons name='add' color={'#fff'} size={40}></Ionicons></TouchableOpacity>
                 </View>
 
