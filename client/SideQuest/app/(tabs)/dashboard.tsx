@@ -3,6 +3,7 @@ import { Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import Tasks from '../components/tasks'
+import coinDisplay from '../components/coindisplay'
 
 export default function Dashboard() {
     const router = useRouter();
@@ -24,10 +25,7 @@ export default function Dashboard() {
                 </View>
 
                 {/*
-                <View className='flex flex-row self-end mr-4 border border-[4px] border-[#797979] rounded-2xl px-[10px] py-[4px]'> // Coin display (ONLY CHILDREN VIEW)
-                    <Text className='text-3xl -mt-[1px] mr-2 text-white font-bold'>150</Text>
-                    <Image source={require('../assets/Coin.png')} style={{ width: 30, height: 30 }} resizeMode="contain" />
-                </View>
+                    <coinDisplay />
                 */}
             </View>
 
