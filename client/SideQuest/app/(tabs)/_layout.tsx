@@ -7,7 +7,7 @@ import { View } from 'react-native';
 
 export default function TabsLayout() {
     return (
-        <Tabs screenOptions={{tabBarStyle: {backgroundColor: '#999999'} ,tabBarActiveTintColor: "#ffffff", tabBarInactiveTintColor: '#c5c5c5' }}>
+        <Tabs initialRouteName='dashboard' screenOptions={{tabBarStyle: {backgroundColor: '#999999'} ,tabBarActiveTintColor: "#ffffff", tabBarInactiveTintColor: '#c5c5c5' }}>
             <Tabs.Screen 
                 name='shop'
                 options={{
