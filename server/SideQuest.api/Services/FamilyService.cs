@@ -83,6 +83,7 @@ namespace SideQuest.api.Services
             if (string.IsNullOrWhiteSpace(familyId))
                 throw new ArgumentException("FamilyId is required.", nameof(familyId));
 
+            
             return _familyRepository.DeleteFamily(familyId);
         }
     }
