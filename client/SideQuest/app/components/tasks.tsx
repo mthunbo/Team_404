@@ -47,7 +47,7 @@ export default function Tasks() {
 
                                 <View className='flex flex-row'>
                                     <Text className='text-lg font-bold text-white mr-2'>{task.coins}</Text>
-                                    <Image source={require('../assets/Coin.png')} className='mt-[4px]' style={{ width: 20, height: 20 }} resizeMode="contain" />
+                                    <Image source={require('../assets/Coin.png')} className='mt-[3px]' style={{ width: 20, height: 20 }} resizeMode="contain" />
                                 </View>
                             </View>
                         </TouchableOpacity>
