@@ -11,7 +11,7 @@ namespace SideQuest.api.Models
         // The quest id of the quest the child-user picked
         [BsonElement("assignedQuestId")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string AssignedQuestId {get; set;} = null!;
+        public string? AssignedQuestId {get; set;}
 
         // The amount of coins the child has
         [BsonElement("coins")]
