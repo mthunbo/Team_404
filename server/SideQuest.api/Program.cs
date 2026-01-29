@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using SideQuest.Api.Config;
-
-
+using SideQuest.api.Repositories;
+using SideQuest.api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +29,13 @@ builder.Services.AddSingleton(sp =>
     var client = sp.GetRequiredService<IMongoClient>();
     return client.GetDatabase(mongoSettings.DatabaseName);
 });
+
+// DI: Repositories + Services
+builder.Services.AddScoped<FamilyRepository>();
+builder.Services.AddScoped<ParentRepository>();
+
+builder.Services.AddScoped<FamilyService>();
+builder.Services.AddScoped<ParentService>();
 
 // CORS
 builder.Services.AddCors(options =>

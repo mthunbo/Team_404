@@ -35,10 +35,7 @@ namespace SideQuest.api.Controllers
             [FromQuery] string adminUserId)
         {
             var family = await _familyService.CreateFamily(name, adminUserId);
-            return CreatedAtAction(
-                nameof(GetFamilyById),
-                new { familyId = family.FamilyId },
-                family);
+            return Ok(family);
         }
 
         /// <summary>
