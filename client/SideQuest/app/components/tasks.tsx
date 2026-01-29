@@ -47,35 +47,44 @@ export default function Tasks() {
 
                                 <View className='flex flex-row'>
                                     <Text className='text-lg font-bold text-white mr-2'>{task.coins}</Text>
-                                    <Image source={require('../assets/Coin.png')} className='mt-[4px]' style={{ width: 20, height: 20 }} resizeMode="contain" />
+                                    <Image source={require('../assets/Coin.png')} className='mt-[3px]' style={{ width: 20, height: 20 }} resizeMode="contain" />
                                 </View>
                             </View>
                         </TouchableOpacity>
                         {isOpen && (
                             <View className='flex flex-col justify-center items-center bg-[#C9C9C9] mt-1 rounded-lg p-2'>
-                                <Text className='text-orange-600 text-2xl font-bold mb-1'>Quest Description</Text>
+                                <Text className='text-orange-600 text-xl font-bold mb-1'>Quest Description</Text>
                                 <View className='bg-[#B3B3B3] border border-3 border-[#A5A5A5] rounded-lg p-2'>
-                                    <Text className='text-white text-xl'>{task.description}</Text>
+                                    <Text className='text-white text-md'>{task.description}</Text>
                                 </View>
                                 {task.state === 'notStarted' && (
                                     <TouchableOpacity activeOpacity={0.8}>
                                         <View className='bg-[#4AB659] rounded-lg mt-4 p-2'>
-                                            <Text className='text-white text-xl font-bold'>Take quest</Text>
+                                            <Text className='text-white text-sm font-bold'>Take quest</Text>
                                         </View> 
                                     </TouchableOpacity>
                                 )}
 
                                 {task.state === 'inProgress' && (
-                                    <TouchableOpacity activeOpacity={0.8}>
-                                        <View className='bg-[#FB390E] rounded-lg mt-4 p-2'>
-                                            <Text className='text-white text-xl font-bold'>Cancel quest</Text>
-                                        </View> 
-                                    </TouchableOpacity>
+                                    <View className='flex flex-row justify-between gap-4'>
+                                        <TouchableOpacity activeOpacity={0.8}>
+                                            <View className='bg-[#FB390E] rounded-lg mt-4 p-2'>
+                                                <Text className='text-white text-sm font-bold'>Cancel quest</Text>
+                                            </View> 
+                                        </TouchableOpacity>
+
+                                        <TouchableOpacity activeOpacity={0.8}>
+                                            <View className='bg-[#4AB659] rounded-lg mt-4 p-2'>
+                                                <Text className='text-white text-sm font-bold'>Complete quest</Text>
+                                            </View> 
+                                        </TouchableOpacity>
+                                        
+                                    </View>
                                 )}
 
                                 {task.state === 'completed' && (
                                     <View className='mt-4'>
-                                        <Text className='text-green-600 text-lg font-bold'>Waiting for approval</Text>
+                                        <Text className='text-green-600 text-sm font-bold'>Waiting for approval</Text>
                                     </View> 
                                 )}
                             </View>
