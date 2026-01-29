@@ -9,11 +9,11 @@ namespace SideQuest.api.Models.Entities
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string UserId {get; set;} = null!;
+        public string? UserId {get; set;} = null!;
         
         [BsonElement("familyId")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string FamilyId {get; set;} = null!;
+        public string? FamilyId {get; set;} = null!;
 
         [BsonElement("passwordHash")]
         public string PasswordHash {get; set;} = null!;

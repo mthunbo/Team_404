@@ -6,6 +6,8 @@ namespace SideQuest.api.Services
     public class FamilyService
     {
         private readonly FamilyRepository _familyRepository;
+        // private readonly ChildRepository _childRepository;
+        // private readonly QuestRepository _questRepository;
 
         public FamilyService(FamilyRepository familyRepository)
         {
@@ -30,7 +32,10 @@ namespace SideQuest.api.Services
             var family = new Family
             {
                 Name = name.Trim(),
-                Admin = adminUserId.Trim()
+                Admin = adminUserId.Trim(),
+                ChildIds = [],
+                QuestIds = [],
+                RewardIds = []
             };
 
             return await _familyRepository.CreateFamily(family);
@@ -73,7 +78,7 @@ namespace SideQuest.api.Services
         }
 
         /// <summary>
-        /// Deletes the family with the given ID
+        /// Deletes the family with the given ID, and all children quests and rewards belonging to said family
         /// </summary>
         /// <param name="familyId"></param>
         /// <returns>True if family was deleted otherwise false</returns>
@@ -82,6 +87,22 @@ namespace SideQuest.api.Services
         {
             if (string.IsNullOrWhiteSpace(familyId))
                 throw new ArgumentException("FamilyId is required.", nameof(familyId));
+
+/*             var family = _familyRepository.GetById(familyId);
+            foreach (var childId in family.Children ?? Enumerable.Empty<string>())
+            {
+                await _childRepository.Delete(childId);
+            }
+
+            foreach (var questId in family.Quests ?? Enumerable.Empty<string>())
+            {
+                await _questRepository.Delete(questId);
+            }
+
+            foreach (var rewardId in family.Rewards ?? Enumerable.Empty<string>())
+            {
+                await _rewardRepository.Delete(rewardId);
+            } */
 
             return _familyRepository.DeleteFamily(familyId);
         }

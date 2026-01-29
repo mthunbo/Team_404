@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import Tasks from '../components/tasks'
 import CoinDisplay from '../components/coindisplay'
 
@@ -10,6 +11,8 @@ export default function Dashboard() {
 
     return (
         <View className='flex-1 flex-col bg-[#B3B3B3] justify-center items-center gap-[20px]'>
+
+            <StatusBar hidden/>
 
             <View className='flex flex-row justify-between px-6 w-full'>
                 {/* Settings button */}
@@ -30,7 +33,7 @@ export default function Dashboard() {
 
                 <Text className='text-orange-600 text-4xl font-bold'>Quests</Text>
 
-            <View className='w-[300px] h-[600px]'>
+            <View className='w-[300px] h-[550px]'>
                 <ScrollView className='bg-[#D9D9D9] rounded-xl border border-[5px] border-[#A5A5A5] p-4'>
                     {/* Tasks will be loaded here */}
                     <Tasks/>
