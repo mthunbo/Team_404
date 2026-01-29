@@ -23,15 +23,15 @@ namespace SideQuest.api.Models
 
         [BsonElement("children")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public List<Child>? Children {get; set;}
+        public List<string>? ChildIds {get; set;}
 
         [BsonElement("quests")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public List<Quest>? Quests { get; set; }
+        public List<string>? QuestIds { get; set; }
 
         [BsonElement("rewards")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public List<Reward>? Rewards { get; set; }
+        public List<string>? RewardIds { get; set; }
 
     }
 }
