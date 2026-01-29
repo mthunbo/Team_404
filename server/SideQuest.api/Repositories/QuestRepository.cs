@@ -38,7 +38,5 @@ namespace server.Repositories
         {
             await _quest.InsertOneAsync(quest);
         }
-        
-
     }
 }

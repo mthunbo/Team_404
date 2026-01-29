@@ -4,6 +4,7 @@ using MongoDB.Driver;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 using SideQuest.api.Repositories;
+using System.Xml;
 
 namespace server.Services
 {
@@ -16,12 +17,26 @@ namespace server.Services
         {
             _questRepository = questRepository;
         }
-        public async Task<Quest> ServiceCreateQuest(User user, Quest quest)
+        public async Task<Quest> ServiceCreateQuest(User user, CreateQuestDto questDto)
         {
             if (user.Role != UserRole.Parent)
                 throw new UnauthorizedAccessException();
             
-            quest.FamilyId = user.FamilyId;
+            var quest = new Quest 
+            {
+                Title = questDto.Title,
+                Description = questDto.Description,
+                DueDate = questDto.DueDate,
+                Repeating = questDto.Repeating,
+                RepeatInterval = questDto.RepeatInterval,
+
+            // Questattributes that is autoconfigured - not decided by the parent-user. 
+                // A check that ensures the quest familyId is aligned with the users familyId.
+                FamilyId = user.FamilyId,
+                CreatedAt = DateTime.UtcNow,
+                // Default state of the quest:
+                QuestState = Quest.StateOfQuest.NotStarted
+            };
 
             await _questRepository.CreateQuest(quest);
             return quest;
@@ -38,10 +53,10 @@ namespace server.Services
             return updatedQuest;
         }
 
-        public async Task<Quest> 
-
-
-
+        public async Task<Quest>
+        {
+            
+        }
 
     }
 }
