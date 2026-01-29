@@ -5,11 +5,13 @@ using SideQuest.api.Models;
 
 namespace server.Controllers{
     
+    /// <summary>
+    /// Controller for managing quests.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class QuestController : ControllerBase 
     {
-
         private readonly UserService _userService;
         private readonly QuestService _questService;
 

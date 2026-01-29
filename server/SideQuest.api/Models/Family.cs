@@ -2,7 +2,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace SideQuest.api.Models
-    {
+{
 
     // The family is the group of the parent and child users
     public class Family
@@ -19,6 +19,5 @@ namespace SideQuest.api.Models
         // The login token of the child-user
         [BsonElement("name")]
         public string Name {get; set;} = null!;
-
     }
 }
