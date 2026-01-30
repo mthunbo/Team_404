@@ -28,17 +28,15 @@ namespace server.Repositories
             return result.DeletedCount > 0;
         }
 
-        public async Task<Quest> UpdateQuest(string id)
+        public async Task UpdateQuest(Quest quest)
         {
-            var result = await _quest.ReplaceOneAsync(g => g.QuestId == id);
-            new ReplaceOptions (isUpsert = false);
+            var result = await _quest.ReplaceOneAsync(f => f.QuestId == quest.QuestId, quest,
+            new ReplaceOptions { IsUpsert = false } );
         } 
 
-        public async Task<Quest> CreateQuest(Quest quest)
+        public async Task CreateQuest(Quest quest)
         {
             await _quest.InsertOneAsync(quest);
         }
-        
-
     }
 }
