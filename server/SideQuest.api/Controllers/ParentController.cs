@@ -61,8 +61,8 @@ namespace SideQuest.api.Controllers
         [HttpPut("{parentId}")]
         public async Task<IActionResult> Update(
             string parentId,
-            [FromBody] string? email,
-            [FromBody] DateTime? birthdate)
+            [FromQuery] string? email,
+            [FromQuery] DateTime? birthdate)
         {
             var ok = await _parents.Update(parentId, email, birthdate);
             return ok ? NoContent() : NotFound();

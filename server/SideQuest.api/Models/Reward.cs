@@ -8,7 +8,7 @@ namespace SideQuest.api.Models
     public class Reward
     {
         // The ID of the rewards
-        [BsonElement("rewardId")]
+        [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string RewardId {get; set;} = null!;
 

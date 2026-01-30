@@ -8,16 +8,30 @@ namespace SideQuest.api.Models
     public class Family
     {
         // The ID of the family group
-        [BsonElement("familyId")]
+        [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string FamilyId {get; set;} = null!;
         
-        // The amount of coins the child-user has used
+        // The parent admin account
         [BsonElement("admin")]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string Admin {get; set;} = null!;
 
-        // The login token of the child-user
+        // Name of the family
         [BsonElement("name")]
         public string Name {get; set;} = null!;
+
+        [BsonElement("children")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public List<string>? ChildIds {get; set;}
+
+        [BsonElement("quests")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public List<string>? QuestIds { get; set; }
+
+        [BsonElement("rewards")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public List<string>? RewardIds { get; set; }
+
     }
 }
