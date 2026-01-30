@@ -1,5 +1,6 @@
 using SideQuest.api.Models;
 using server.Repositories;
+using SideQuest.api.DTOs;
 using MongoDB.Driver;
 using Microsoft.Extensions.Options;
 using System.Globalization;
@@ -53,9 +54,16 @@ namespace server.Services
             return updatedQuest;
         }
 
-        public async Task<Quest>
+        public async Task<bool> ServiceDeleteQuest(User user, string questId)
         {
+            var existing = await _questRepository.GetById(deletedQuest.QuestId);
             
+            if (existing == null)
+                return false;
+                
+            if (existing.FamilyId != user.FamilyId)    
+                throw new UnauthorizedAccessException();
+            await _questRepository.DeleteQuest(questId);
         }
 
     }
