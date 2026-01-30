@@ -131,5 +131,14 @@ namespace SideQuest.api.Services
             child.AssignedQuestId = null!;
             return await _children.UpdateChild(child);
         }
+
+        /// <summary>
+        /// Deletes a child user by its unique identifier.
+        /// </summary>
+        /// <param name="childId">The ID of the child user to delete.</param>
+        /// <returns>True if the child was deleted successfully; otherwise false.</returns>
+        public Task<bool> DeleteChild(string childId) =>
+            _children.DeleteChild(childId);
     }
 }
+

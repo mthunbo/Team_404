@@ -132,5 +132,19 @@ namespace SideQuest.api.Controllers
             var ok = await _children.ClearAssignedQuest(childId);
             return ok ? NoContent() : NotFound();
         }
+        
+        /// <summary>
+        /// Deletes a child user by its unique identifier.
+        /// </summary>
+        /// <param name="childId">The ID of the child user to delete.</param>
+        /// <returns>No content if the deletion was successful.</returns>
+        /// <response code="204">child was deleted successfully</response>
+        /// <response code="404">If the parent was not found</response>
+        [HttpDelete("{childId}")]
+        public async Task<IActionResult> Delete(string childId)
+        {
+            var ok = await _children.DeleteChild(childId);
+            return ok ? NoContent() : NotFound();
+        }
     }
 }
